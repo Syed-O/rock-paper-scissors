@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+        console.log("Hellow World")
+        function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+        }
+
+        
+        let RanNum = getRandomInt(3)
+        console.log(RanNum)
+        function GetComputerChoice (RanNum) {
+            if (RanNum==0) {
+                return "Rock";
+            }
+            else if (RanNum == 1) {
+                return"Paper";
+            }
+            else {
+                return "Scissors";
+            }
+        }
+        console.log(GetComputerChoice(RanNum))
+        console.log("Computer choice is",GetComputerChoice(RanNum))
+    </script>
+</body>
+</html>
