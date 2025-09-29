@@ -8,11 +8,12 @@
 <body>
     <script>
         console.log("Hellow World")
+        var humanScore = 0
+        var compterScore = 0
+
         function getRandomInt(max) {
         return Math.floor(Math.random() * max);
         }
-
-        
         let RanNum = getRandomInt(3)
         console.log(RanNum)
         function GetComputerChoice (RanNum) {
@@ -28,6 +29,31 @@
         }
         console.log(GetComputerChoice(RanNum))
         console.log("Computer choice is",GetComputerChoice(RanNum))
+
+        function getUserInput () {
+        let userChoice = prompt("Write any one of Rock, Ppaper, Scissors",);
+        return userChoice;
+        }
+
+        console.log(getUserInput())
+
+        function playRound(humanChoice, computerChoice) {
+            if (humanChoice == "Rock" && computerChoice == "Rock"){
+                return "Tie";
+            }
+                
+            else if (humanChoice == "Rock" && computerChoice == "scissors"){
+                return "Human wins"
+            }
+                
+
+        }
+
+        const humanSelection = getUserInput();
+        const computerSelection = GetComputerChoice();
+
+        playRound(humanSelection, computerSelection);
+
     </script>
 </body>
 </html>
