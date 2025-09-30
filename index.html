@@ -32,27 +32,40 @@
 
         function getUserInput () {
         let userChoice = prompt("Write any one of Rock, Ppaper, Scissors",);
-        return userChoice;
+        let userChoiceProcssd = userChoice.toLowerCase()
+        return userChoiceProcssd;
         }
 
-        console.log(getUserInput())
+        
 
         function playRound(humanChoice, computerChoice) {
-            if (humanChoice == "Rock" && computerChoice == "Rock"){
+            if (humanChoice == "rock" && computerChoice == "rock"){
                 return "Tie";
             }
                 
-            else if (humanChoice == "Rock" && computerChoice == "scissors"){
-                return "Human wins"
+            else if ((humanChoice == "rock" && computerChoice == "scissors") ||(humanChoice == "paper" && computerChoice == "rock")){
+                return "Human wins";
+                humanScore = humanScore + 1;
             }
-                
+            
+            else if ((humanChoice == "scissors" && computerChoice == "rock") || (humanChoice == "rock" && computerChoice == "paper")){
+                return "Computer wins";
+                compterScore = compterScore + 1;
+            }   
+
+            else {
+                return "some swett issue with the code";
+            }
 
         }
 
         const humanSelection = getUserInput();
         const computerSelection = GetComputerChoice();
 
+        console.log(humanSelection)
+
         playRound(humanSelection, computerSelection);
+        
 
     </script>
 </body>
