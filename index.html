@@ -8,6 +8,7 @@
 <body>
     <script>
         console.log("Hellow World")
+
         var humanScore = 0
         var compterScore = 0
 
@@ -16,15 +17,16 @@
         }
         let RanNum = getRandomInt(3)
         console.log(RanNum)
+
         function GetComputerChoice (RanNum) {
             if (RanNum==0) {
-                return "Rock";
+                return "rock";
             }
             else if (RanNum == 1) {
-                return"Paper";
+                return"paper";
             }
             else {
-                return "Scissors";
+                return "scissors";
             }
         }
         console.log(GetComputerChoice(RanNum))
@@ -39,7 +41,7 @@
         
 
         function playRound(humanChoice, computerChoice) {
-            if (humanChoice == "rock" && computerChoice == "rock"){
+            if (humanChoice == computerChoice){
                 return "Tie";
             }
                 
@@ -60,12 +62,15 @@
         }
 
         const humanSelection = getUserInput();
-        const computerSelection = GetComputerChoice();
+        const computerSelection = GetComputerChoice(RanNum);
 
         console.log(humanSelection)
-
-        playRound(humanSelection, computerSelection);
+        console.log(computerSelection)
         
+        playRound(humanSelection, computerSelection);
+        console.log(playRound());
+        console.log("computer score", compterScore)
+        console.log("human score", humanScore)
 
     </script>
 </body>
