@@ -38,14 +38,16 @@
         return userChoiceProcssd;
         }
 
-        
+        let A = "rock";
+        let B = "paper";
+        let C = "scissors";
 
         function playRound(humanChoice, computerChoice) {
-            if (humanChoice == computerChoice){
-                return "Tie";
+            if (humanChoice === A && computerChoice === C) {
+                return "Human wins";
+                humanScore = humanScore + 1;
             }
-                
-            else if ((humanChoice == "rock" && computerChoice == "scissors") ||(humanChoice == "paper" && computerChoice == "rock")){
+            else if (humanChoice === "paper" && computerChoice === "rock"){
                 return "Human wins";
                 humanScore = humanScore + 1;
             }
@@ -55,10 +57,8 @@
                 compterScore = compterScore + 1;
             }   
 
-            else {
-                return "some swett issue with the code";
-            }
-
+            else (humanChoice == computerChoice)
+                return "Tie";
         }
 
         const humanSelection = getUserInput();
