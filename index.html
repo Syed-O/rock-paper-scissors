@@ -10,7 +10,7 @@
         console.log("Hellow World")
 
         var humanScore = 0
-        var compterScore = 0
+        var computerScore = 0
 
         function getRandomInt(max) {
         return Math.floor(Math.random() * max);
@@ -38,27 +38,25 @@
         return userChoiceProcssd;
         }
 
-        let A = "rock";
-        let B = "paper";
-        let C = "scissors";
-
         function playRound(humanChoice, computerChoice) {
-            if (humanChoice === A && computerChoice === C) {
-                return "Human wins";
-                humanScore = humanScore + 1;
-            }
-            else if (humanChoice === "paper" && computerChoice === "rock"){
-                return "Human wins";
-                humanScore = humanScore + 1;
-            }
-            
-            else if ((humanChoice == "scissors" && computerChoice == "rock") || (humanChoice == "rock" && computerChoice == "paper")){
-                return "Computer wins";
-                compterScore = compterScore + 1;
-            }   
 
-            else (humanChoice == computerChoice)
-                return "Tie";
+        if (humanChoice === computerChoice) {
+            return "Tidyee!";
+        } 
+        
+        else if (
+            (humanChoice === 'rock' && computerChoice === 'scissors') || 
+            (humanChoice === 'paper' && computerChoice === 'rock') || 
+            (humanChoice === 'scissors' && computerChoice === 'paper')
+        ) {
+            humanScore += 1; 
+            return "Human wins!";
+        } 
+
+        else {
+            computerScore += 1; 
+            return "Computer wins!";
+        }
         }
 
         const humanSelection = getUserInput();
@@ -69,7 +67,7 @@
         
         playRound(humanSelection, computerSelection);
         console.log(playRound());
-        console.log("computer score", compterScore)
+        console.log("computer score", computerScore)
         console.log("human score", humanScore)
 
     </script>
