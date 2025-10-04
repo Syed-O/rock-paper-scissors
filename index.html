@@ -16,7 +16,7 @@
         return Math.floor(Math.random() * max);
         }
         let RanNum = getRandomInt(3)
-        console.log(RanNum)
+        //console.log(RanNum)
 
         function GetComputerChoice (RanNum) {
             if (RanNum==0) {
@@ -29,7 +29,7 @@
                 return "scissors";
             }
         }
-        console.log(GetComputerChoice(RanNum))
+        //console.log(GetComputerChoice(RanNum))
         console.log("Computer choice is",GetComputerChoice(RanNum))
 
         function getUserInput () {
@@ -62,11 +62,10 @@
         const humanSelection = getUserInput();
         const computerSelection = GetComputerChoice(RanNum);
 
-        console.log(humanSelection)
-        console.log(computerSelection)
+        console.log("Human choice is",humanSelection)
+        //console.log(computerSelection)
         
-        playRound(humanSelection, computerSelection);
-        console.log(playRound());
+        console.log(playRound(humanSelection, computerSelection));
         console.log("computer score", computerScore)
         console.log("human score", humanScore)
 
