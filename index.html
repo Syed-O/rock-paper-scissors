@@ -9,9 +9,6 @@
     <script>
         console.log("Hellow World")
 
-        var humanScore = 0
-        var computerScore = 0
-
         function getRandomInt(max) {
         return Math.floor(Math.random() * max);
         }
@@ -37,6 +34,11 @@
         let userChoiceProcssd = userChoice.toLowerCase()
         return userChoiceProcssd;
         }
+
+        for (let i = 0; i < 5; i++) {
+        console.log("The number is: " + i);
+        var humanScore = 0
+        var computerScore = 0
 
         function playRound(humanChoice, computerChoice) {
 
@@ -68,7 +70,8 @@
         console.log(playRound(humanSelection, computerSelection));
         console.log("computer score", computerScore)
         console.log("human score", humanScore)
-
+        }
+        
     </script>
 </body>
 </html>
