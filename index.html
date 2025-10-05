@@ -36,41 +36,44 @@
         }
 
         for (let i = 0; i < 5; i++) {
-        console.log("The number is: " + i);
-        var humanScore = 0
-        var computerScore = 0
+            console.log("The number is: " + i);
+            var humanScore = 0
+            var computerScore = 0
 
-        function playRound(humanChoice, computerChoice) {
+            function playRound(humanChoice, computerChoice) {
 
-        if (humanChoice === computerChoice) {
-            return "Tidyee!";
-        } 
-        
-        else if (
-            (humanChoice === 'rock' && computerChoice === 'scissors') || 
-            (humanChoice === 'paper' && computerChoice === 'rock') || 
-            (humanChoice === 'scissors' && computerChoice === 'paper')
-        ) {
-            humanScore += 1; 
-            return "Human wins!";
-        } 
+            if (humanChoice === computerChoice) {
+                alert ("Tie");
+                return "Tidyee!";
+            } 
+            
+            else if (
+                (humanChoice === 'rock' && computerChoice === 'scissors') || 
+                (humanChoice === 'paper' && computerChoice === 'rock') || 
+                (humanChoice === 'scissors' && computerChoice === 'paper')
+            ) {
+                humanScore += 1; 
+                alert ("Human wins");
+                return "Human wins!";
+            } 
 
-        else {
-            computerScore += 1; 
-            return "Computer wins!";
-        }
-        }
+            else {
+                computerScore += 1; 
+                //alert ("Computer wins");
+                return "Computer wins!";
+            }
+            }
 
-        const humanSelection = getUserInput();
-        const computerSelection = GetComputerChoice(RanNum);
+            const humanSelection = getUserInput();
+            const computerSelection = GetComputerChoice(RanNum);
 
-        console.log("Human choice is",humanSelection)
-        //console.log(computerSelection)
-        
-        console.log(playRound(humanSelection, computerSelection));
-        console.log("computer score", computerScore)
-        console.log("human score", humanScore)
-        }
+            console.log("Human choice is",humanSelection)
+            //console.log(computerSelection)
+            
+            console.log(playRound(humanSelection, GetComputerChoice(RanNum)));
+            console.log("computer score", computerScore)
+            console.log("human score", humanScore)
+            }
         
     </script>
 </body>
