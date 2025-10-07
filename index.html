@@ -9,36 +9,36 @@
     <script>
         console.log("Hellow World")
 
-        function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-        }
-        let RanNum = getRandomInt(3)
-        //console.log(RanNum)
-
-        function GetComputerChoice (RanNum) {
-            if (RanNum==0) {
-                return "rock";
-            }
-            else if (RanNum == 1) {
-                return"paper";
-            }
-            else {
-                return "scissors";
-            }
-        }
-        //console.log(GetComputerChoice(RanNum))
-        console.log("Computer choice is",GetComputerChoice(RanNum))
-
-        function getUserInput () {
-        let userChoice = prompt("Write any one of Rock, Ppaper, Scissors",);
-        let userChoiceProcssd = userChoice.toLowerCase()
-        return userChoiceProcssd;
-        }
+        var humanScore = 0
+        var computerScore = 0
 
         for (let i = 0; i < 5; i++) {
+            function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+            }
+            let RanNum = getRandomInt(3)
+            //console.log(RanNum)
+
+            function GetComputerChoice (RanNum) {
+                if (RanNum==0) {
+                    return "rock";
+                }
+                else if (RanNum == 1) {
+                    return"paper";
+                }
+                else {
+                    return "scissors";
+                }
+            }
+            //console.log(GetComputerChoice(RanNum))
+            console.log("Computer choice is",GetComputerChoice(RanNum))
+
+            function getUserInput () {
+            let userChoice = prompt("Write any one of Rock, Ppaper, Scissors",);
+            let userChoiceProcssd = userChoice.toLowerCase()
+            return userChoiceProcssd;
+            }
             console.log("The number is: " + i);
-            var humanScore = 0
-            var computerScore = 0
 
             function playRound(humanChoice, computerChoice) {
 
@@ -59,7 +59,7 @@
 
             else {
                 computerScore += 1; 
-                //alert ("Computer wins");
+                alert ("Computer wins");
                 return "Computer wins!";
             }
             }
@@ -74,7 +74,18 @@
             console.log("computer score", computerScore)
             console.log("human score", humanScore)
             }
-        
+
+            if (humanScore > computerScore) {
+                alert ("You Won!!!")
+                console.log ("Human Wins")
+            }
+            else if (computerScore > humanScore){
+                alert ("Better luck next time")
+                console.log ("Computer Wins")
+            }        
+            else {
+                Console.log ("Tie")
+            }
     </script>
 </body>
 </html>
